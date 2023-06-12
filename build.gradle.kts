@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 
 plugins {
-    kotlin("jvm") version "1.8.20"
+    kotlin("jvm") version "1.7.22"
     jacoco
     id("io.gitlab.arturbosch.detekt")
 }
@@ -29,28 +29,6 @@ subprojects {
 
 
     repositories {
-        maven {
-            url = uri("https://gitlab.com/api/v4/groups/simpleps/-/packages/maven")
-            name = "GitLab"
-            credentials(HttpHeaderCredentials::class) {
-                name = "Job-Token"
-                value = System.getenv("CI_JOB_TOKEN")
-            }
-            authentication {
-                create("header", HttpHeaderAuthentication::class)
-            }
-        }
-        maven {
-            url = uri("https://gitlab.com/api/v4/groups/simpleps/-/packages/maven")
-            name = "GitLab"
-            credentials(HttpHeaderCredentials::class) {
-                name = "Private-Token"
-                value = System.getenv("GITLAB_ACCESS_TOKEN") ?: findProperty("gitLabPrivateToken") as String?
-            }
-            authentication {
-                create("header", HttpHeaderAuthentication::class)
-            }
-        }  
         mavenCentral()
     }
 
