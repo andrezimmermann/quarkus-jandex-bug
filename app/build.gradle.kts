@@ -6,7 +6,7 @@ val quarkusPlatformVersion: String by project
 val picocontainerVersion: String by project
 
 plugins {
-    id("org.jetbrains.kotlin.plugin.allopen").version("1.8.20")
+    id("org.jetbrains.kotlin.plugin.allopen").version("1.8.10")
     id("io.quarkus")
     id("com.github.davidmc24.gradle.plugin.avro").version("1.3.0")
 }

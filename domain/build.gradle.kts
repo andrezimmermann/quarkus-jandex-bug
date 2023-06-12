@@ -1,7 +1,7 @@
 val picocontainerVersion: String by project
 
 plugins {
-    id("com.google.devtools.ksp") version "1.8.20-1.0.11"
+    id("com.google.devtools.ksp") version "1.8.10-1.0.9"
 }
 
 repositories {

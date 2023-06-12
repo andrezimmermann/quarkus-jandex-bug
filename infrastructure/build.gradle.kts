@@ -1,5 +1,5 @@
 plugins {
-    id("org.jetbrains.kotlin.plugin.allopen").version("1.8.20")
+    id("org.jetbrains.kotlin.plugin.allopen").version("1.8.10")
     id ("org.kordamp.gradle.jandex") version "1.1.0"
     id("io.quarkus")
     id ("java-test-fixtures")
